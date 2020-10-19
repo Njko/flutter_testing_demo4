@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing_demo4/todo_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,11 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('TodoList'),
+          ),
+          body: TodoList()), //MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
